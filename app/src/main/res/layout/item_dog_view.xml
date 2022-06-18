@@ -27,7 +27,7 @@
         <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/dog_image_view"
             android:layout_width="0dp"
-            android:layout_height="0dp"
+            android:layout_height="@dimen/dog_image_view"
             android:background="@color/back_ground"
             android:scaleType="fitXY"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -45,7 +45,7 @@
             android:padding="@dimen/padding_7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/dog_image_view"
-            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintWidth_percent="0.6">
 
             <androidx.appcompat.widget.AppCompatTextView

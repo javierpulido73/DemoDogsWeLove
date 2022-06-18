@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="dogName"
+            type="String" />
+
+        <variable
+            name="dogDescription"
+            type="String" />
+
+        <variable
+            name="dogAge"
+            type="String" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_7"
+        android:background="@color/back_ground">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/dog_image_view"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/back_ground"
+            android:scaleType="fitXY"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.3"
+            app:shapeAppearanceOverlay="@style/roundedImageView"
+            tools:ignore="ContentDescription" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_10"
+            android:background="@android:color/white"
+            android:padding="@dimen/padding_7"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/dog_image_view"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.7">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dogNameTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:gravity="start"
+                android:text="@{dogName}"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/text_size_10"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:text="Chief" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/dogDescriptionTextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_2"
+                android:gravity="start"
+                android:text="@{dogDescription}"
+                android:textColor="@color/gray"
+                android:textSize="@dimen/text_size_7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dogNameTextView"
+                tools:text="Black forme white with black spots, he dont trust anyone" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_5"
+                android:gravity="start"
+                android:paddingBottom="@dimen/padding_5"
+                android:text="@{dogAge}"
+                android:textColor="@color/dark"
+                android:textSize="@dimen/text_size_7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/dogDescriptionTextView"
+                tools:text="Almost 2 years" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

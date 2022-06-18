@@ -9,7 +9,7 @@
     <dimen name="margin_2">4dp</dimen>
     <dimen name="margin_5">10dp</dimen>
     <dimen name="margin_7">14dp</dimen>
-    <dimen name="margin_10">"20dp</dimen>
+    <dimen name="margin_10">20dp</dimen>
     <dimen name="margin_15">30dp</dimen>
 
 

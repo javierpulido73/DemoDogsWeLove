@@ -12,7 +12,7 @@ import com.example.demodogswelove.framework.android.ui.dogs.DogsOverviewActivity
  * Created by Javier Pulido on 17/junio/2022
  */
 class SplashActivity : AppCompatActivity() {
-    private lateinit var dataBinding: ActivitySplashBinding
+    private lateinit var binding: ActivitySplashBinding
 
     companion object {
         private const val SPLASH_TIME = 3000L
@@ -20,7 +20,8 @@ class SplashActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        dataBinding = ActivitySplashBinding.inflate(layoutInflater)
+        binding = ActivitySplashBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         Handler(Looper.getMainLooper()).postDelayed({
             val intent = Intent(this, DogsOverviewActivity::class.java)
             startActivity(intent)

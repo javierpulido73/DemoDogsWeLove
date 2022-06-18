@@ -56,5 +56,6 @@ class DogsOverviewActivity : AppCompatActivity(), AndroidScopeComponent {
 
     private fun onShowLoadingtCollected(visibility: Boolean) {
         binding.loadingProgressBar.visibility = if (visibility) View.VISIBLE else View.GONE
+        binding.dogsConstraintLayout.visibility = if (visibility) View.GONE else View.VISIBLE
     }
 }

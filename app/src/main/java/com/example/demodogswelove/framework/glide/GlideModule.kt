@@ -34,5 +34,4 @@ fun provideRequestOptions(): RequestOptions {
 
 object GlideInstance : KoinComponent {
     val glide: RequestManager by inject()
-    var imageBaseUrl: String? = null
 }

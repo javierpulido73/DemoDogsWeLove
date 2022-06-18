@@ -4,10 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.content.res.AppCompatResources
 import androidx.lifecycle.lifecycleScope
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.example.demodogswelove.R
 import com.example.demodogswelove.application.model.DogModel
 import com.example.demodogswelove.databinding.ActivityDogsOverviewBinding
 import kotlinx.coroutines.Dispatchers
@@ -25,14 +23,8 @@ class DogsOverviewActivity : AppCompatActivity(), AndroidScopeComponent {
         super.onCreate(savedInstanceState)
         binding = ActivityDogsOverviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        buildView()
         collectFlows()
         lifecycleScope.launch(Dispatchers.IO) { viewModel.getDogs() }
-    }
-
-    private fun buildView() {
-        binding.toolbar.title = getString(R.string.toolbar_title)
-        binding.toolbar.navigationIcon =  AppCompatResources.getDrawable(this, R.drawable.ic_arrow_back)
     }
 
     private fun collectFlows() {

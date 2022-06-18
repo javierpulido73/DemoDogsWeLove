@@ -31,7 +31,7 @@ class DogAdapter(private val dogs: List<DogModel>) :
                 GlideInstance.glide.load(dogs[position].image)
                     .apply(RequestOptions.centerCropTransform())
                     .transition(withCrossFade())
-                    .into(imageView)
+                    .into(dogImageView)
             }
         }
     }

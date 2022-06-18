@@ -40,9 +40,9 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="@dimen/margin_10"
             android:background="@android:color/white"
-            android:padding="15dp"
+            android:padding="@dimen/padding_7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/dog_image_view"
             app:layout_constraintTop_toTopOf="parent"
@@ -78,7 +78,7 @@
             <androidx.appcompat.widget.AppCompatTextView
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="@dimen/margin_5"
                 android:gravity="start"
                 android:paddingBottom="@dimen/padding_5"
                 android:text="@{dogAge}"

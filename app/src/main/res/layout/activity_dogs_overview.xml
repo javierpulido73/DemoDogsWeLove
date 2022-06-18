@@ -31,7 +31,7 @@
                 tools:ignore="ContentDescription" />
 
             <androidx.appcompat.widget.AppCompatTextView
-                android:id="@+id/dogNameTextView"
+                android:id="@+id/dog_name_text_view"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:gravity="center"

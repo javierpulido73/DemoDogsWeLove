@@ -33,7 +33,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.3"
+            app:layout_constraintWidth_percent="0.4"
             app:shapeAppearanceOverlay="@style/roundedImageView"
             tools:ignore="ContentDescription" />
 
@@ -41,12 +41,12 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_10"
-            android:background="@android:color/white"
+            android:background="@drawable/bg_dog_description"
             android:padding="@dimen/padding_7"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toEndOf="@id/dog_image_view"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintWidth_percent="0.7">
+            app:layout_constraintWidth_percent="0.6">
 
             <androidx.appcompat.widget.AppCompatTextView
                 android:id="@+id/dogNameTextView"

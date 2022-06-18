@@ -24,6 +24,7 @@ class DogsOverviewActivity : AppCompatActivity(), AndroidScopeComponent {
         binding = ActivityDogsOverviewBinding.inflate(layoutInflater)
         setContentView(binding.root)
         collectFlows()
+        setListeners()
         lifecycleScope.launch(Dispatchers.IO) { viewModel.getDogs() }
     }
 
@@ -32,6 +33,12 @@ class DogsOverviewActivity : AppCompatActivity(), AndroidScopeComponent {
             launch { viewModel.shoDogsList.collect { onShowDogsListCollected(it) } }
             launch { viewModel.showDogsServiceError.collect { onShowDogsServiceErrorCollected(it) } }
             launch { viewModel.showLoading.collect { onShowLoadingtCollected(it) } }
+        }
+    }
+
+    private fun setListeners() {
+        binding.backArrow.setOnClickListener {
+            Toast.makeText(this, "Se realizará alguna acción...", Toast.LENGTH_LONG).show()
         }
     }
 
